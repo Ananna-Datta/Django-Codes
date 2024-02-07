@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block contant %}
+
+<div class="d-flex flex-wrap justify-content-center">
+    {% for i in meal %}
+          <div class="card" style="width: 18rem; margin: 20px">
+          <img src="{{i.strCategoryThumb}}" class="card-img-top " alt="...">
+          <div class="card-body">
+              {% comment %} <p>{{i.strCategory}}</p> {% endcomment %}
+              <h1><b>{{i.strCategory}}</h1></b>
+              <p>{{i.strCategoryDescription |truncatewords:12 }}</p>
+            {% comment %} <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> {% endcomment %}
+          </div>
+        </div>
+        {% endfor %}
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ lst | length }}</h1>
+    <h1>{{ x | add:"2" }}</h1>
+    <h1>{{ y | addslashes }}</h1>
+    <h1>{{ z | capfirst }}</h1>
+    <h1>"{{ y | center:"15" }}"</h1>
+    <h1>{{ p | cut:" " }}</h1>
+    <h1>{{ birthday | date:"D d M Y" }}</h1>
+    <h1>{{ val | default:"nothing" }}</h1>
+    <h1>{{ info | dictsort:"name" }}</h1>
+    <h1>{{ x | divisibleby:"3" }}</h1>
+    <h1>{{ x | filesizeformat }}</h1>
+    <h1>{{ lst | first }}</h1>
+    <h1>{{ lst | join:" // " }}</h1>
+    <h1>{{ lst | last }}</h1>
+    <h1>{{ lst | length }}</h1>
+    <h1>{{ info | linenumbers }}</h1>
+    <h1>{{ y | lower }}</h1>
+    <h1>{{ p | make_list }}</h1>
+    <h1>{{ lst | random }}</h1>
+    <h1>{{ lst | slice:":2" }}</h1>
+    <h1>{{ p | slugify }}</h1>
+    <h1>{{ birthday | time:"H:i" }}</h1>
+    <h1>{{ y | title }}</h1>
+    <h1>{{ y | upper }}</h1>
+    <h1>{{ y | wordcount }}</h1>
+    <h1>{{p | join:" // "}}</h1>
+    <h1>{{q | date:"SHORT_DATE_FORMAT"}}</h1>
+    <h1>This is for testing</h1>
+</body>
+</html>
