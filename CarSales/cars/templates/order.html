@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
+
+<h1>{{ car.name }}</h1>
+<p>Brand: {{ car.brand }}</p>
+<!-- Display other car details -->
+
+<h2>History</h2>
+<ul>
+{% for item in history %}
+    <li>
+        <p>Name: {{ item.name }}</p>
+        <p>Brand: {{ item.brand }}</p>
+        <p>Quantity: {{ item.quantity }}</p>
+        <!-- Display other history details -->
+    </li>
+{% endfor %}
+</ul>
