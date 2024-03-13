@@ -8,7 +8,7 @@
             <h1 class="card-title">{{car.title}}</h1>
             <p class="card-text">{{car.description}}</p>
             <p>Price : ${{car.price}}M</p>
-            <p>Brand : {{car.brand}}</p>  
+            <p>Brand : {{car.title}}</p>  
             <p class="card-text">Quantity={{car.quantity}}</p>
             <br>
             <div>
@@ -25,7 +25,7 @@
     {% for comment in comments %}
   <div class="card-body border m-2">
         <p><b>{{comment.name}}</b> {{comment.created_on}}</p>
-        <p>{{comment.body}}</p>
+        <p>{{comment.comment}}</p>
     </div>
     {% endfor %}
 </div>

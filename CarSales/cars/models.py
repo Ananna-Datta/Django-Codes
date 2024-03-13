@@ -1,4 +1,5 @@
 from django.db import models
+from categories.models import Category
 from django.contrib.auth.models import User
 from django.urls import reverse
 
@@ -10,12 +11,14 @@ class Brand(models.Model):
         return self.name
 
 class Car(models.Model):
-    brand = models.CharField(max_length=100)
+    # brand = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     description = models.TextField()
+    category = models.ManyToManyField(Category)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='cars/')
     quantity = models.IntegerField(default=1)
+    customer = models.ManyToManyField(User, blank=True)
 
     def __str__(self):
         return self.title
@@ -32,4 +35,6 @@ class Comment(models.Model):
     
     def __str__(self):
         return f"Comments by {self.name}"
+     
+    
     

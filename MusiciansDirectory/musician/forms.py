@@ -7,7 +7,7 @@ class MusicianForm(forms.ModelForm):
     class Meta:
         model = Musician
         fields = '__all__'
-        from django import forms
+        # from django import forms
 # class AuthorForm(forms.ModelForm):
 #     class Meta: 
 #         model = Author

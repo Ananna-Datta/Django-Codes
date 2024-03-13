@@ -24,7 +24,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='homepage'),
     path('customer/', include('customer.urls')),
-    path('brand/<slug:brand_slug>/', views.home, name='brand_wise_post'),
+    path('category/', include('categories.urls')),
+    path('category/<slug:category_slug>/', views.home, name='category_wise_post'),
+    # path('brand/<slug:brand_slug>/', views.home, name='brand_wise_post'),
     path('cars/', include('cars.urls')),
 ]
 

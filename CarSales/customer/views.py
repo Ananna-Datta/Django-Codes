@@ -4,9 +4,10 @@ from django.contrib.auth.forms import  AuthenticationForm, PasswordChangeForm
 from django.contrib.auth import authenticate, login , update_session_auth_hash, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-# from posts.models import Post
+from cars.models import Car
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import reverse_lazy
+
 # Create your views here.
 
 # def add_author(request):
@@ -81,8 +82,8 @@ class UserLoginView(LoginView):
 
 @login_required
 def profile(request):
-    # data = Post.objects.filter(author = request.user)
-    return render(request, 'profile.html')
+    cars = Car.objects.filter(customer=request.user)
+    return render(request, 'profile.html',{'cars':cars})
 
 @login_required
 def edit_profile(request):
@@ -114,4 +115,5 @@ def pass_change(request):
 
 def user_logout(request):
     logout(request)
-    return redirect('user_login')
+    return redirect('home')
+
